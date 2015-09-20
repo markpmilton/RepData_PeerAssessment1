@@ -29,6 +29,7 @@ And now for the graph as histograph not a bar plot
 ```{r}
 hist(StepsTtl$steps, main = "Ttl steps by day", xlab = "day", col = "blue")
 ```
+![plot1](./figures/Rplot1.png) 
 and now for my next trick the mean and the median
 ```{r}
 mean(StepsTtl$steps)
@@ -44,6 +45,7 @@ plot(row.names(series_time), series_time, type = "l", xlab = "5-min interval",
     ylab = "Average across Days(all)", main = "Average number of steps", 
     col = "blue")
 ```
+![plot1](./figures/Rplot2.png) 
 And you should have seen the plot above  
 
 so for which interval has the maximum steps
@@ -94,6 +96,7 @@ now for the histogram mean and median
 StepsTtl2 <- aggregate(steps ~ date, data = filled_activity, sum, na.rm = TRUE)
 hist(StepsTtl2$steps, main = "Ttl steps by day", xlab = "day", col = "blue")
 ```
+![plot1](./figures/Rplot3.png) 
 ```{r}
 mean(StepsTtl2$steps)
 median(StepsTtl2$steps)
@@ -131,3 +134,4 @@ Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minut
 xyplot(steps ~ interval | daylevel, stepsByDay, type = "l", layout = c(1, 2), 
     xlab = "Interval", ylab = "Number of steps")
 ```
+![plot1](./figures/Rplot4.png) 
